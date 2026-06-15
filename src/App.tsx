@@ -91,6 +91,10 @@ const projects = [
     solution:
       "Plataforma para registrar horas por projeto, item e atividade, além de apoiar gestores e financeiro com dashboards e relatórios.",
     technologies: ["Java", "Spring Boot", "React", "Docker", "API REST"],
+    hardSkillsExperience:
+      "Neste projeto apliquei hard skills ligadas a backend e integração de sistemas: modelagem de API REST, organização de entidades, uso de Java e Spring Boot, versionamento com Git/GitHub, entendimento de Docker e leitura de requisitos para transformar regras de negócio em funcionalidades.",
+    softSkillsExperience:
+      "Também desenvolvi soft skills durante o trabalho em equipe. Precisei me adaptar à dinâmica do grupo, comunicar dúvidas e decisões, organizar meu tempo entre faculdade e rotina familiar, cumprir combinados e defender minha participação quando foi necessário para continuar contribuindo com o projeto.",
     challenges:
       "Modelar permissões, estruturar tarefas por hierarquia, garantir responsividade e manter rastreabilidade das alterações.",
     results:
@@ -322,6 +326,18 @@ function Portfolio() {
                   <span key={tech}>{tech}</span>
                 ))}
               </div>
+              {"hardSkillsExperience" in project && "softSkillsExperience" in project ? (
+                <div className="project-experience">
+                  <article>
+                    <strong>Hard skills aplicadas</strong>
+                    <p>{project.hardSkillsExperience}</p>
+                  </article>
+                  <article>
+                    <strong>Soft skills desenvolvidas</strong>
+                    <p>{project.softSkillsExperience}</p>
+                  </article>
+                </div>
+              ) : null}
             </article>
           ))}
         </div>
@@ -336,7 +352,10 @@ function Portfolio() {
         <div className="note-card">
           <h3>Produção acadêmica</h3>
           <p>
-           Em progresso...
+            No momento, esta área pode ser usada para registrar relatórios
+            técnicos, trabalhos de disciplinas e documentos futuros do curso.
+            Quando houver arquivos prontos, basta inserir o título, um resumo,
+            os resultados e o link do documento.
           </p>
         </div>
       </section>
