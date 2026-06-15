@@ -336,10 +336,7 @@ function Portfolio() {
         <div className="note-card">
           <h3>Produção acadêmica</h3>
           <p>
-            No momento, esta área pode ser usada para registrar relatórios
-            técnicos, trabalhos de disciplinas e documentos futuros do curso.
-            Quando houver arquivos prontos, basta inserir o título, um resumo,
-            os resultados e o link do documento.
+           Em progresso...
           </p>
         </div>
       </section>
