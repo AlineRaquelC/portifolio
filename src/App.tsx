@@ -19,12 +19,36 @@ const techSkills = {
 };
 
 const softSkills = [
-  "Trabalho em equipe",
-  "Organização",
-  "Resolução de problemas",
-  "Comunicação",
-  "Aprendizado contínuo",
-  "Responsabilidade",
+  {
+    name: "Trabalho em equipe",
+    evidence:
+      "Entrei na FATEC vindo de outra unidade, sem conhecer a turma, e consegui me entrosar bem nos projetos. Essa adaptação mostra que consigo colaborar mesmo em equipes novas.",
+  },
+  {
+    name: "Organização",
+    evidence:
+      "Conciliar faculdade, projetos, casamento e a rotina com dois filhos exige planejamento. Aprendi a administrar meu tempo para manter entregas, estudos e responsabilidades pessoais em ordem.",
+  },
+  {
+    name: "Comunicação",
+    evidence:
+      "Em momentos importantes, soube explicar minha situação, defender minha permanência e dialogar com clareza para buscar uma solução justa.",
+  },
+  {
+    name: "Resolução de problemas",
+    evidence:
+      "Quando surgiram dificuldades acadêmicas e pessoais, precisei analisar o cenário, me posicionar e encontrar caminhos para continuar evoluindo no curso.",
+  },
+  {
+    name: "Responsabilidade",
+    evidence:
+      "A rotina familiar e acadêmica reforça meu compromisso com prazos, presença nos projetos e continuidade dos estudos, mesmo com muitas demandas acontecendo ao mesmo tempo.",
+  },
+  {
+    name: "Adaptabilidade",
+    evidence:
+      "A mudança de FATEC e a entrada em uma turma nova exigiram flexibilidade para aprender a dinâmica da equipe, criar vínculos e contribuir sem depender de um ambiente conhecido.",
+  },
 ];
 
 const projects = [
@@ -247,9 +271,12 @@ function Portfolio() {
           </div>
           <div className="skill-panel">
             <h3>Soft skills</h3>
-            <div className="skill-tags">
+            <div className="soft-skill-list">
               {softSkills.map((skill) => (
-                <span key={skill}>{skill}</span>
+                <article key={skill.name}>
+                  <strong>{skill.name}</strong>
+                  <p>{skill.evidence}</p>
+                </article>
               ))}
             </div>
           </div>
